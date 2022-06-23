@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <main>
     <h1>CHARACTERS</h1>
     <CharacterForm />
     <CharactersList />
-  </div>
+  </main>
 </template>
 
 <script>

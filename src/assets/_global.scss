@@ -13,3 +13,28 @@
   .success {
     @include theme($theme: DarkGreen);
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --colorTextos: #0e0d0d;
+    --colorBotones: #41cffa;
+    --colorFondo: #838688;
+    --paddingSecciones: 30px 0;
+    --marginElementos: 10px;
+  }
+  
+  body {
+    font-family: 'Comfortaa';
+  }
+  
+  
+  .contenedor {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: var(--paddingSecciones);
+  }
