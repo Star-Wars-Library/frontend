@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>RAZAS</h1>
+    <h1>SPECIES</h1>
   </div>
 </template>
 

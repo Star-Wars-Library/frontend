@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>NAVES</h1>
+    <h1>SPACESHIPS</h1>
   </div>
 </template>
 

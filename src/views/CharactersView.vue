@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>PERSONAJES</h1>
+    <h1>CHARACTERS</h1>
     <CharacterForm />
     <CharactersList />
   </div>
@@ -9,10 +9,14 @@
 <script>
 import CharacterForm from "@/components/Characters/CharacterForm.vue";
 import CharactersList from "@/components/Characters/CharactersList.vue";
+import { mapActions } from "vuex";
 
 export default {
+  methods: {
+    ...mapActions("characters", ["get"]),
+  },
   async mounted() {
-    await this.$store.dispatch("fetchCharacters");
+    await this.get("characters");
   },
   components: { CharacterForm, CharactersList },
 };

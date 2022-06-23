@@ -10,7 +10,9 @@
       <div>GENDER: {{ character.gender }}</div>
       <div>BIRTHYEAR: {{ character.yearBirth }}</div>
       <div>FORCE SENSITIVE: {{ character.forceSensitive }}</div>
-      <button @click="deleteCharacter(character.id)">DELETE</button>
+      <button @click="del({ collection: 'characters', id: character.id })">
+        DELETE
+      </button>
     </div>
   </div>
 </template>
@@ -30,17 +32,15 @@
 </style>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   computed: {
     ...mapState({
-      characters: (state) => state.characters,
+      characters: (state) => state.characters.characters,
     }),
   },
   methods: {
-    async deleteCharacter(id) {
-      await this.$store.dispatch("deleteCharacter", id);
-    },
+    ...mapActions("characters", ["del"]),
   },
 };
 </script>

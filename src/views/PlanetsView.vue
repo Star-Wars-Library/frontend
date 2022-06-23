@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>PLANETAS</h1>
+    <h1>PLANETS</h1>
   </div>
 </template>
 
