@@ -2,7 +2,7 @@
     <header>
         <div class="menu-navegacion">
             <!--Logotipo-->
-            <img src="~@/assets/img/logo_star-wars_peq.jpg" alt="StarWarsLibrary" class="logo">
+            <img src="~@/assets/img/logo_vectorial.svg" alt="StarWarsLibrary" class="logo">
 
             <!--Menú navegación -->
 
@@ -40,8 +40,8 @@ export default {
 /* Hero */
 
 .hero {
-    height: 40vh;
-    background-image: url("~@/assets/img/1.01.jpg");
+    height: 30vh;
+    background-image: url("~@/assets/img/1.02.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

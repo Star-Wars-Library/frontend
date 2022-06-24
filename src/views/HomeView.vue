@@ -3,24 +3,6 @@
 
     <body>
       <main class="grid-container">
-        <div class="item" @click="go('species')">
-          <img src="~@/assets/img/star_raza_01.png" alt="species" class="img">
-          <div class="contenedor-texto">
-            <p class="title-card">species</p>
-          </div>
-        </div>
-        <div class="item" @click="go('weapons')">
-          <img src="~@/assets/img/star_arma_01.png" alt="weapons" class="img">
-          <div class="contenedor-texto">
-            <p class="title-card">Weapons</p>
-          </div>
-        </div>
-        <div class="item" @click="go('ships')">
-          <img src="~@/assets/img/star_nave_01.png" alt="ships" class="img">
-          <div class="contenedor-texto">
-            <p class="title-card">Ships</p>
-          </div>
-        </div>
         <div class="item" @click="go('characters')">
           <img src="~@/assets/img/star_per_01.png" alt="characters" class="img">
           <div class="contenedor-texto">
@@ -31,6 +13,24 @@
           <img src="~@/assets/img/star_plan_01.png" alt="planets" class="img">
           <div class="contenedor-texto">
             <p class="title-card">Planets</p>
+        </div>
+        </div>
+        <div class="item" @click="go('ships')">
+          <img src="~@/assets/img/star_nave_01.png" alt="ships" class="img">
+          <div class="contenedor-texto">
+            <p class="title-card">Spaceships</p>
+          </div>
+        </div>
+        <div class="item" @click="go('weapons')">
+          <img src="~@/assets/img/star_arma_01.png" alt="weapons" class="img">
+          <div class="contenedor-texto">
+            <p class="title-card">Weapons</p>
+          </div>
+        </div> 
+        <div class="item" @click="go('species')">
+          <img src="~@/assets/img/star_raza_01.png" alt="species" class="img">
+          <div class="contenedor-texto">
+            <p class="title-card">Species</p>
           </div>
         </div>
       </main>

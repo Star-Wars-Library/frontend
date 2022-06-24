@@ -1,6 +1,6 @@
 <template>
    <footer>
-          <img src="~@/assets//img/logo_star_peq.png" alt="log" class="logo_fotter">
+          <img src="~@/assets//img/logo_vectorial.svg" alt="log" class="logo_fotter">
           <h6>Copyright 2022</h6> 
     </footer>
 </template>
