@@ -1,22 +1,22 @@
 <template>
   <div id="container">
     <div class="form-wrap">
-      <form id="spaceshipForm" @submit.prevent="send">
+      <form id="weaponForm" @submit.prevent="send">
         <p class="form-group">
           <label for="name">name</label>
-          <input type="text" name="name" value="Halcón milenario" />
+          <input type="text" name="name" value="Ballesta láser" />
         </p>
         <p class="form-group">
-          <label for="model">model</label>
-          <input type="text" name="model" value="Carguero" />
+          <label for="techLevel">techLevel</label>
+          <input type="text" name="techLevel" value="Medio" />
         </p>
         <p class="form-group">
-          <label for="constructor">constructor</label>
-          <input type="text" name="constructor" value="Sienar" />
+          <label for="ammunition">ammunition</label>
+          <input type="number" name="ammunition" value="88" />
         </p>
         <p class="form-group">
-          <label for="lenght">lenght</label>
-          <input type="number" name="lenght" value="50" />
+          <label for="weight">weight</label>
+          <input type="number" name="weight" value="50" />
         </p>
         <p class="form-group"><input type="submit" value="Send" /></p>
       </form>
@@ -28,16 +28,16 @@
 import { mapActions } from "vuex";
 export default {
   methods: {
-    ...mapActions("ships", ["post"]),
+    ...mapActions("weapons", ["post"]),
     send({ target }) {
-      let spaceship = {};
+      let weapon = {};
       Array.from(target.elements).map((element) => {
         let { name, value, type, checked } = element;
         if (type === "submit") return;
         if (type === "checkbox") value = checked;
-        spaceship = { ...spaceship, [name]: value };
+        weapon = { ...weapon, [name]: value };
       });
-      this.post({ collection: "ships", item: spaceship });
+      this.post({ collection: "weapons", item: weapon });
     },
   },
 };
