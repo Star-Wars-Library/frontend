@@ -1,7 +1,8 @@
 @mixin bg-color($collection) {
   $colors: (
-    "characters": yellow,
-    "species": green,
+    "characters": lightyellow,
+    "species": lightgreen,
+    "planets": lightblue
   );
   background-color: map.get($colors, $collection);
 }

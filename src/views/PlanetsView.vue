@@ -1,9 +1,23 @@
 <template>
-  <div>
+  <main>
     <h1>PLANETS</h1>
-  </div>
+    <PlanetForm />
+    <PlanetsList />
+  </main>
 </template>
 
 <script>
-export default {};
+import PlanetForm from "@/components/Planets/PlanetForm.vue";
+import PlanetsList from "@/components/Planets/PlanetsList.vue";
+import { mapActions } from "vuex";
+
+export default {
+  methods: {
+    ...mapActions("planets", ["get"]),
+  },
+  async mounted() {
+    await this.get("planets");
+  },
+  components: { PlanetForm, PlanetsList },
+};
 </script>
