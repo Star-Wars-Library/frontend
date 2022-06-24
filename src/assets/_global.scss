@@ -3,7 +3,8 @@
     "characters": lightyellow,
     "species": lightgreen,
     "planets": lightblue,
-    "ships": lightcyan
+    "ships": lightcyan,
+    "weapons": linen,
   );
   background-color: map.get($colors, $collection);
 }

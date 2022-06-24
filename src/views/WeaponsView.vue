@@ -1,9 +1,23 @@
 <template>
-  <div>
+  <main>
     <h1>WEAPONS</h1>
-  </div>
+    <WeaponForm />
+    <WeaponsList />
+  </main>
 </template>
 
 <script>
-export default {};
+import WeaponForm from "@/components/Weapons/WeaponForm.vue";
+import WeaponsList from "@/components/Weapons/WeaponsList.vue";
+import { mapActions } from "vuex";
+
+export default {
+  methods: {
+    ...mapActions("weapons", ["get"]),
+  },
+  async mounted() {
+    await this.get("weapons");
+  },
+  components: { WeaponForm, WeaponsList },
+};
 </script>
