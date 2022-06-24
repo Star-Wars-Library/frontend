@@ -2,7 +2,8 @@
   $colors: (
     "characters": lightyellow,
     "species": lightgreen,
-    "planets": lightblue
+    "planets": lightblue,
+    "ships": lightcyan
   );
   background-color: map.get($colors, $collection);
 }

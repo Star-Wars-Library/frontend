@@ -13,7 +13,6 @@ export const apiActions = {
   },
   post: async ({ commit }, { collection, item }) => {
     try {
-      console.log({ collection, item });
       const res = await fetch(`${apiUrl}/${collection}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
