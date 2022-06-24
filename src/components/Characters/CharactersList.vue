@@ -1,19 +1,10 @@
 <template>
   <div class="characterList">
-    <div
-      class="characterList__container"
+    <CharacterItem
       v-for="character in characters"
       :key="character.id"
-    >
-      <div>ID: {{ character.id }}</div>
-      <div>NAME: {{ character.name }}</div>
-      <div>GENDER: {{ character.gender }}</div>
-      <div>BIRTHYEAR: {{ character.yearBirth }}</div>
-      <div>FORCE SENSITIVE: {{ character.forceSensitive }}</div>
-      <button @click="del({ collection: 'characters', id: character.id })">
-        DELETE
-      </button>
-    </div>
+      :character="character"
+    />
   </div>
 </template>
 
@@ -33,7 +24,9 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
+import CharacterItem from "./CharacterItem.vue";
 export default {
+  components: { CharacterItem },
   computed: {
     ...mapState({
       characters: (state) => state.characters.characters,
